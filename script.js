@@ -5,6 +5,27 @@ setTimeout(() => {
   car = 'focus';
 }, 5000);
 
+// Animal constructor that allows me to create animal instances
+// which inherit their methods from Object.prototype
+function Animal(name) {
+  debugger
+  this.name = name;
+}
+
+// Mammal constructor that allows me to create mammal instances
+// which inherit their methods from Animal.prototype
+function Mammal(name) {
+  debugger
+  Animal.call(this, name);
+}
+
+// Rodent constructor that allows me to create rodent instances
+// which inherit their methods from Mammal.prototype
+function Rodent(name) {
+  debugger
+  Mammal.call(this, name);
+}
+
 
 // A- SEUDO-CLASSIC INHERITANCE
 //    1- Create a Vehicle constructor that "subclasses" Object.
