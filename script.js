@@ -44,7 +44,7 @@ class Mammal2 extends Animal2 {
   // the required args, to run the parent's constructor
   constructor(name) {
     super(name);
-    this.suckles = true;
+    this.isAMammal = true;
   }
 
   suckle() {
@@ -62,6 +62,16 @@ Rodent.prototype.eatCheese = function () {
   console.log('eating cheese!');
 };
 
+class Rodent2 extends Mammal2 {
+  constructor(name) {
+    super(name);
+    this.isARodent = true;
+  }
+
+  eatCheese() {
+    console.log('eating cheese!');
+  }
+}
 
 // A- SEUDO-CLASSIC INHERITANCE
 //    1- Create a Vehicle constructor that "subclasses" Object.
