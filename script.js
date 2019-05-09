@@ -14,6 +14,18 @@ Animal.prototype.greet = function () {
   console.log(`Hi, I am ${this.name}`);
 };
 
+class Animal2 {
+  constructor(name) {
+    this.name = name;
+  }
+
+  greet() {
+    console.log(`Hi, I am ${this.name}`);
+  }
+}
+
+const someAnimal = new Animal2('Gabe');
+
 // Mammal constructor that allows me to create mammal instances
 // which inherit their methods from Animal.prototype
 function Mammal(name) {
