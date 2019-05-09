@@ -15,9 +15,11 @@ Animal.prototype.greet = function () {
 };
 
 class Animal2 {
+  // get a constructor going
   constructor(name) {
     this.name = name;
   }
+  // add methods
 
   greet() {
     console.log(`Hi, I am ${this.name}`);
@@ -36,6 +38,10 @@ Mammal.prototype.suckle = function () {
 };
 
 class Mammal2 extends Animal2 {
+  // if we intend to add properties to Mammal that are special
+  // to Mammal (Animal won't have them), we need an explicit
+  // constructor also, and don't forget to invoke super passing
+  // the required args, to run the parent's constructor
   constructor(name) {
     super(name);
     this.suckles = true;
