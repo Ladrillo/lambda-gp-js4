@@ -20,6 +20,9 @@ function Mammal(name) {
   Animal.call(this, name);
 }
 Mammal.prototype = Object.create(Animal.prototype);
+Mammal.prototype.suckle = function () {
+  console.log('Yummy!');
+};
 
 // Rodent constructor that allows me to create rodent instances
 // which inherit their methods from Mammal.prototype
