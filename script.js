@@ -8,23 +8,22 @@ setTimeout(() => {
 // Animal constructor that allows me to create animal instances
 // which inherit their methods from Object.prototype
 function Animal(name) {
-  debugger;
   this.name = name;
 }
 
 // Mammal constructor that allows me to create mammal instances
 // which inherit their methods from Animal.prototype
 function Mammal(name) {
-  debugger;
   Animal.call(this, name);
 }
+Mammal.prototype = Object.create(Animal.prototype);
 
 // Rodent constructor that allows me to create rodent instances
 // which inherit their methods from Mammal.prototype
 function Rodent(name) {
-  debugger;
   Mammal.call(this, name);
 }
+Rodent.prototype = Object.create(Mammal.prototype);
 
 
 // A- SEUDO-CLASSIC INHERITANCE
