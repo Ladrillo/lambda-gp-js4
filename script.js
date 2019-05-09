@@ -10,6 +10,9 @@ setTimeout(() => {
 function Animal(name) {
   this.name = name;
 }
+Animal.prototype.greet = function () {
+  console.log(`Hi, I am ${this.name}`);
+};
 
 // Mammal constructor that allows me to create mammal instances
 // which inherit their methods from Animal.prototype
@@ -24,6 +27,9 @@ function Rodent(name) {
   Mammal.call(this, name);
 }
 Rodent.prototype = Object.create(Mammal.prototype);
+Rodent.prototype.eatCheese = function () {
+  console.log('eating cheese!');
+};
 
 
 // A- SEUDO-CLASSIC INHERITANCE
