@@ -23,7 +23,6 @@ class Animal2 {
     console.log(`Hi, I am ${this.name}`);
   }
 }
-
 const someAnimal = new Animal2('Gabe');
 
 // Mammal constructor that allows me to create mammal instances
@@ -35,6 +34,17 @@ Mammal.prototype = Object.create(Animal.prototype);
 Mammal.prototype.suckle = function () {
   console.log('Yummy!');
 };
+
+class Mammal2 extends Animal2 {
+  constructor(name) {
+    super(name);
+    this.suckles = true;
+  }
+
+  suckle() {
+    console.log('Yummy!');
+  }
+}
 
 // Rodent constructor that allows me to create rodent instances
 // which inherit their methods from Mammal.prototype
