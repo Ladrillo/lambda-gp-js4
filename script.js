@@ -8,21 +8,21 @@ setTimeout(() => {
 // Animal constructor that allows me to create animal instances
 // which inherit their methods from Object.prototype
 function Animal(name) {
-  debugger
+  debugger;
   this.name = name;
 }
 
 // Mammal constructor that allows me to create mammal instances
 // which inherit their methods from Animal.prototype
 function Mammal(name) {
-  debugger
+  debugger;
   Animal.call(this, name);
 }
 
 // Rodent constructor that allows me to create rodent instances
 // which inherit their methods from Mammal.prototype
 function Rodent(name) {
-  debugger
+  debugger;
   Mammal.call(this, name);
 }
 
